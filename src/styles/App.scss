@@ -1,0 +1,44 @@
+$primarycolor: #f00;
+$secondarycolor: #fff;
+
+h1  {
+    color: $primarycolor;
+}
+
+h2 {
+    $primarycolor: #0f0 !global;
+    background-color: $primarycolor;
+}
+
+h3 {
+    color: $primarycolor;
+    
+}
+
+.tera {   //nesting tera
+    padding: 10px;
+    background-color: $primarycolor;
+    h3{
+        color: $secondarycolor;
+    }
+    ul {
+        background-color: red;
+    }
+    li {
+        color: blueviolet;
+    }
+}
+
+.button {
+    padding: 10px;
+    background-color: red;
+
+    &:hover {
+        background-color: orange;
+        transform: scale(1.2);
+    }
+
+    &-prime {
+        font-size: 30px;
+    }
+}
